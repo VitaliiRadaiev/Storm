@@ -1,0 +1,99 @@
+.promo-header {
+    position: relative;
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+
+        &:before {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(#000, 0.3);
+            z-index: 2;
+        }
+    }
+
+    &__body {
+        min-height: 100vh;
+        padding: 200px 20px 127px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @media (max-width: $md2+px) {
+            min-height: 800px;
+            padding: 175px 20px 135px;
+        }
+
+        @media (max-width: $md3+px) {
+            min-height: 500px;
+            padding: 150px 20px 67px;
+        }
+    }
+
+    &__title {
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 18px;
+
+        @media (max-width: $md4+px) {
+            margin-bottom: 8px;
+        }
+    }
+
+    &__subtitle {
+        color: #ffffff;
+        font-size: 40px;
+        font-weight: 400;
+        line-height: 1.2em;
+        margin-bottom: 54px;
+
+        @media (max-width: $md3+px) {
+            font-size: 28px;
+        }
+        @media (max-width: $md4+px) {
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+    }
+
+
+    &__btn {
+        align-self: flex-start;
+
+        &.btn-default {
+            font-size: 15px;
+
+            & > span {
+                min-width: 17.30em;
+                min-height: 3.75em;
+                padding-right: 4.7em;
+
+                &:before {
+                    font-size: 2.1em;
+                    right: -1em;
+                }
+            }
+
+            @media (max-width: $md2+px) {
+                font-size: 12px;
+            }
+
+            @media (max-width: $md3+px) {
+                font-size: 10px;
+            }
+            @media (max-width: $md4+px) {
+                font-size: 7px;
+            }
+        }
+    }
+}

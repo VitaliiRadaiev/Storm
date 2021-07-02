@@ -1,0 +1,209 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: rgba(#fff, 0.9);
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 15px rgba(#000, 0.1);
+
+    &__body {
+        display: flex;
+        align-items: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        @media (max-width: $md2+px) {
+            justify-content: space-between;
+        }
+
+    }
+
+    &__logo {
+        width: 100%;
+        max-width: 232px;
+        margin-right: 30px;
+
+        @media (max-width: $md2+px) {
+            margin-right: 0;
+        }
+
+        & img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__menu {
+        margin-left: auto;
+        margin-right: 37px;
+    }
+
+    &__btn {
+        @media (max-width: $md2+px) {
+            margin-left: 25px;
+        }
+
+        @media (max-width: $md3+px) {
+            &.btn-default {
+                padding-right: 0;
+                font-size: 8px;
+                &:after {
+                    display: none;
+                }
+
+                &:before {
+                    clip-path: none;
+                }
+
+                & > span {
+                    padding: 0.75em 1.5em;
+                }
+            }
+        }
+
+        @media (max-width: $md4+px) {
+            &.btn-default {
+                font-size: 6px;
+            }
+        }
+    }
+
+    &__burger {
+        margin-left: -10px;
+        @media (min-width: 992px) {
+            display: none;
+        }
+    }
+}
+
+.menu {
+    @media (max-width: $md2+px) {
+        position: fixed;
+        z-index: 101;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        overflow: auto;
+        padding: 100px 20px 20px;
+        transition: all .4s ease;
+        transform: translateX(110%);
+
+
+        &.open {
+            transform: translateX(0%);
+        }
+    }
+
+    &__head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10;
+        box-shadow: 0 3px 10px rgba(#000, 0.1);
+
+        @media (min-width: 992px) {
+            display: none;
+        }
+    }
+
+    &__logo {
+        width: 100%;
+        max-width: 200px;
+
+        & img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    &__close {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        transform: rotate(45deg);
+        &:before {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background-color: $mainColor;
+        }
+        &:after {
+            position: absolute;
+            content: '';
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 100%;
+            height: 4px;
+            background-color: $mainColor;
+        }
+    }
+    &__list {
+        display: flex;
+        align-items: center;
+        
+
+
+        @media (max-width: $md2+px) {
+            justify-content: center;
+            text-align: center;
+            height: 100%;
+            flex-direction: column;
+        }
+
+        & > li {
+            &:not(:last-child) {
+                margin-right: 32px;
+
+                @media (max-width: $md1+px) {
+                    margin-right: 22px;
+                }
+                
+                @media (max-width: $md2+px) {
+                    margin-right: 0;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+
+    &__link {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 1em;
+        text-transform: uppercase;
+        transition: all .3s ease;
+        color: $textColor;
+
+        @media (max-width: $md1+px) {
+            font-size: 15px;
+        }
+
+        @media (min-width: 992px) {
+            white-space: nowrap;
+            &:hover {
+                color:$mainColor;   
+            }
+        }
+
+        @media (max-width: $md2+px) {
+            font-size: 24px;
+        }
+
+        &.current-menu-item {
+            color:$mainColor;   
+        }
+    }
+}

@@ -1,0 +1,103 @@
+.mini-gallery {
+    position: relative;
+    width: 100%;
+
+    &.mini-gallery_1 {
+        max-width: 815px;
+        height: 804px;
+        
+        @media (max-width: $md2+px) {
+            height: 0;
+            padding-bottom: 85.2%;
+        }
+    }
+
+    &__img {
+        position: absolute;
+
+        &_1 {
+            z-index: 2;
+            top: 0;
+            left: 15.8%;
+            height: 58.9%;
+            width: 54.1%;
+
+            & img {
+                height: 88.42%;
+                top: auto;
+                bottom: 0;
+                z-index: 2;
+                box-shadow: 0 3px 60px rgba(0, 0, 0, 0.3);
+            }
+
+            &:before {
+                position: absolute;
+                content: '';
+                top: 0;
+                left: 0;
+                height: 30%;
+                width: 75.62%;
+                background-color: $mainColor2;
+            }
+        }
+
+        &_2 {
+            z-index: 3;
+            right: 0;
+            bottom: 9%;
+            height: 60.32%;
+            width: 59.26%;
+
+            & img {
+                top: auto;
+                bottom: 0;
+                left: auto;
+                right: 0;
+                width: 91.71%;
+                height: 91.34%;
+                z-index: 2;
+            }
+
+            &:before {
+                position: absolute;
+                content: '';
+                z-index: 1;
+                top: 0;
+                left: 0;
+                width: 59.42%;
+                height: 50.30%;
+                background-color: $mainColor2;
+            }
+        
+        }
+
+        &_3 {
+            z-index: 1;
+            left: 0;
+            bottom: 0;
+            width: 45.76%;
+            height: 46.64%;
+
+            & img {
+                top: auto;
+                left: auto;
+                right: 0;
+                bottom: 0;
+                width: 88%;
+                height: 88.2%;
+                z-index: 2;
+            }
+
+            &:before {
+                position: absolute;
+                content: '';
+                z-index: 1;
+                top: 0;
+                left: 0;
+                width: 50%;
+                height: 100%;
+                background-color: $mainColor;
+            }
+        }
+    }
+}

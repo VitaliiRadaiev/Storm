@@ -1,0 +1,131 @@
+.numbers-speak {
+    padding: 94px 0 100px;
+
+    &__body {
+        max-width: 1207px;
+    }
+
+    &__head {
+        display: flex;
+        margin-bottom: 63px;
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__head-icon {
+        flex: 0 0 55px;
+        margin-right: 17px;
+
+        @media (max-width: $md3+px) {
+            flex: 0 0 40px;
+            margin-right: 10px;
+        }
+
+        & img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__head-group {
+    }
+
+    &__title {
+        
+    }
+
+    &__subtitle {
+        color: $mainColor;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.666em;
+
+        @media (max-width: $md3+px) {
+            font-size: 16px;
+        }
+    }
+
+    &__list-wrap {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    &__list {
+        display: flex;
+        margin: 0 -70px;
+
+        @media (max-width: $md1+px) {
+            margin: 0 -40px;
+        }
+        @media (max-width: $md2+px) {
+            margin: 0 -15px;
+            flex-wrap: wrap;
+        }
+
+        & > li {
+            padding: 0 15px;
+            position: relative;
+            text-align: center;
+            flex: 0 1 25%;
+            margin-bottom: 50px;
+
+            @media (max-width: $md2+px) {
+                flex: 0 1 50%;
+            }
+
+            @media (max-width: $md3+px) {
+                flex: 0 1 100%;
+            }
+
+            &:not(:last-child) {
+                &:before {
+                    position: absolute;
+                    content: "";
+                    top: 50%;
+                    right: 0;
+                    width: 1px;
+                    height: 28px;
+                    background-color: $textColor;
+                    transform: translateY(-50%);
+
+                    @media (max-width: $md2+px) {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    &__counter {
+        color: $mainColor;
+        font-family: $titleFontFamily;
+        font-size: 100px;
+        font-weight: 600;
+        line-height: 1em;
+        text-transform: uppercase;
+        white-space: nowrap;
+
+        &:not(.counter-2) {
+            &:before {
+                content: '+';
+            }
+        }
+
+        &.counter-2 {
+            &:after {
+                content: '%';
+                margin-left: -25px;
+            }
+        }
+    }
+
+    &__subtext {
+        color: $mainColor;
+        font-family: $titleFontFamily;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 1.2em;
+    }
+}
