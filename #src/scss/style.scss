@@ -445,6 +445,42 @@ button.btn-default {
 .link {
 }
 
+.social {
+	display: flex;
+	flex-wrap: wrap;
+
+	& > li {
+		margin-right: 6px;
+		margin-bottom: 6px;
+
+		& a {
+			display: inline-block;
+			height: 29px;
+
+			& img, & svg {
+				height: 100%;
+				width: auto;
+			}
+
+			& svg {
+				& path {
+					transition: all .3s ease;
+				}
+			}
+
+			@media (min-width: 992px) {
+				&:hover {
+					& svg {
+						& path {
+							fill: $mainColor;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
 // === TEXT CONTETN BLOCK ========================================================================
 .text-content {
 	font-size: 18px;
