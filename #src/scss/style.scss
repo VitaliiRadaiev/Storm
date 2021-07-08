@@ -91,7 +91,7 @@ body {
 	-moz-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
 	color: $textColor;
-	font-size: 1.8rem;
+	font-size: 18px;
 	transition: opacity 0.8s ease;
 	display: flex;
 	flex-direction: column;
@@ -487,6 +487,10 @@ button.btn-default {
 	font-weight: 400;
 	line-height: 1.6666em;
 
+	@media (max-width: $md4+px) {
+		font-size: 16px;
+	}
+
 	& h1 {
 	}
 	& h2 {
@@ -532,12 +536,10 @@ button.btn-default {
 @import "../common/services/services";
 @import "../common/cleaning-blog/cleaning-blog";
 @import "../common/partners/partners";
+@import "../common/team/team";
 // ==== BLOCKS =====================================================
 
 // ==== PAGES =====================================================
-
-// ==== HOME =====================================================
 @import "pages/home";
-// ==== AND HOME =====================================================
-
+@import "pages/about";
 // ==== AND PAGES =====================================================

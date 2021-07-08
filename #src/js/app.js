@@ -30,6 +30,7 @@ window.addEventListener('load', function () {
 	@@include('../common/numbers-speak/numbers-speak.js');
 	@@include('../common/video-block/video-block.js');
 	@@include('../common/services/services.js');
+	@@include('../common/team/team.js');
 	//@@includ e('../common/popup/popup.js');
 	
 	@@include('pages/home.js');

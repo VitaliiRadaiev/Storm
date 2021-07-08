@@ -1,0 +1,425 @@
+.founder-team {
+    display: flex;
+    margin-bottom: 80px;
+
+    @media (max-width: $md2+px) {
+        display: block;
+    }
+
+    &__card {
+        flex: 0 0 auto;
+
+        &.card-team {
+            cursor: auto;
+
+            @media (min-width: 992px) {
+                &:hover {
+                    & .card-team__text-box {
+                        box-shadow: 0 30px 60px rgba(6, 24, 28, 0.16);
+                    }
+                }
+            }
+        }
+
+        @media (max-width: $md2+px) {
+            margin: 0 auto;
+        }
+    }
+
+    &__text {
+        flex: 1 1 auto;
+        background: #fff;
+        box-shadow: 0 3rem 6rem rgba(152, 152, 152, 0.16);
+        padding: 4rem 7rem 4rem 7rem;
+
+        @media (max-width: $md3+px) {
+            padding: 4rem 4rem 4rem 4rem;
+        }
+        @media (max-width: $md4+px) {
+            padding: 3rem 2rem;
+        }
+    }
+}
+
+.team {
+    background-color: $mainColor2;
+    padding: 9.6rem 0 7.3rem;
+
+    @media (max-width: $md3+px) {
+        padding: 50px 0 30px;
+    }
+    &__founder {
+        &.container {
+            max-width: 152.5rem;
+
+            @media (max-width: 1530px) {
+                max-width: calc(99rem - 30px);
+            }
+        }
+    }
+
+    &__title {
+        margin: 0 auto 5.9rem;
+        text-align: center;
+        color: #fff;
+        font-size: 6rem;
+    }
+
+    &__list-wrap {
+        &.container {
+            max-width: calc(150rem + 30px);
+
+            // @media (max-width: 1530px) {
+            //     max-width: calc(99rem + 30px);
+            // }
+        }
+    }
+    &__list {
+    }
+}
+
+.list-team {
+    & > li {
+        display: flex;
+        justify-content: center;
+        position: relative;
+
+        @for $i from 1 through 49 {
+            &:nth-child(#{$i}) {
+                z-index: 50-$i;
+            }
+        }
+
+        @media (max-width: 1023px) {
+            flex-wrap: wrap;
+
+            & .list-team__cord-wrap {
+                position: relative;
+
+                @for $i from 1 through 49 {
+                    &:nth-child(#{$i}) {
+                        z-index: 50-$i;
+                    }
+                }
+            }
+        }
+
+        @media (max-width: $md4+px) {
+            display: block;
+        }
+
+        &._one {
+            & .list-team__cord-wrap {
+                @media (min-width: 1024px) {
+                    &._open {
+                        &:first-child {
+                            & .card-team {
+                                position: absolute;
+                                left: 0;
+                                animation-name: cardTeamAnimation2;
+                                animation-duration: 0.6s;
+                                z-index: 3;
+                            }
+
+                            & .card-team__hover-box {
+                                right: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &._two {
+            & .list-team__cord-wrap {
+                @media (min-width: 1024px) {
+                    &._open {
+                        &:first-child {
+                            & .card-team {
+                                position: absolute;
+                                left: 0;
+                                animation-name: cardTeamAnimation;
+                                animation-duration: 0.6s;
+                                z-index: 3;
+                            }
+
+                            & .card-team__hover-box {
+                                right: 0;
+                            }
+                        }
+
+                        &:nth-child(2) {
+                            & .card-team {
+                                position: absolute;
+                                left: 0;
+                                animation-name: cardTeamAnimation4;
+                                animation-duration: 0.6s;
+                                z-index: 3;
+                            }
+
+                            & .card-team__hover-box {
+                                right: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__cord-wrap {
+        flex: 0 0 50rem;
+        margin-bottom: 10.3rem;
+        transition: all 0.4s ease;
+
+        @media (max-width: 1023px) {
+            position: relative;
+            cursor: pointer;
+
+            &:nth-child(1) {
+                z-index: 3;
+            }
+            &:nth-child(2) {
+                z-index: 2;
+            }
+            &:nth-child(3) {
+                z-index: 1;
+            }
+        }
+
+        @media (max-width: $md4+px) {
+            margin-bottom: 5rem;
+        }
+
+        @media (min-width: 1024px) {
+            &._open {
+                &:first-child {
+                    & .card-team {
+                        position: absolute;
+                        left: 0;
+                        z-index: 3;
+                    }
+
+                    & .card-team__hover-box {
+                        right: 0;
+                    }
+                }
+
+                &:nth-child(2) {
+                    & .card-team {
+                        position: absolute;
+                        left: 0;
+                        animation-name: cardTeamAnimation2;
+                        animation-duration: 0.6s;
+                        z-index: 3;
+                    }
+
+                    & .card-team__hover-box {
+                        right: 0;
+                    }
+                }
+
+                &:last-child {
+                    & .card-team {
+                        position: absolute;
+                        left: 0;
+                        animation-name: cardTeamAnimation3;
+                        animation-duration: 0.6s;
+                        z-index: 3;
+                    }
+
+                    & .card-team__hover-box {
+                        right: 0;
+                    }
+                }
+            }
+        }
+    }
+    &__card {
+    }
+
+    @keyframes cardTeamAnimation {
+        from {
+            left: 15%;
+        }
+        to {
+            left: 0;
+        }
+    }
+
+    @keyframes cardTeamAnimation2 {
+        from {
+            left: 33.3333%;
+        }
+        to {
+            left: 0;
+        }
+    }
+
+    @keyframes cardTeamAnimation3 {
+        from {
+            left: 66.6666%;
+        }
+        to {
+            left: 0;
+        }
+    }
+
+    @keyframes cardTeamAnimation4 {
+        from {
+            left: 49%;
+        }
+        to {
+            left: 0;
+        }
+    }
+}
+
+.card-team {
+    width: 50rem;
+    height: 100%;
+    position: relative;
+    min-height: 42.1rem;
+    padding: 2rem 2rem 0px 2rem;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    @media (max-width: 1023px) {
+        display: flex;
+    }
+
+    @media (max-width: $md4+px) {
+        width: 100%;
+        padding: 2rem 1rem 0px;
+    }
+
+    @media (min-width: 992px) {
+        &:hover {
+            & .card-team__text-box {
+                box-shadow: 0 30px 60px rgba(6, 24, 28, 0.26);
+            }
+        }
+    }
+
+    &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 52rem;
+
+        & img {
+            //object-position: 0 -2rem;
+        }
+    }
+
+    &__text-box {
+        position: relative;
+        z-index: 2;
+        box-shadow: 0 30px 60px rgba(6, 24, 28, 0.16);
+        background: #fff;
+        margin-top: 40.5rem;
+        min-height: 12.9rem;
+        width: 100%;
+        padding: 3.7rem 4rem 2rem 5.5rem;
+        transition: all 0.3s ease;
+
+        @media (max-width: $md4+px) {
+            padding: 3rem 2rem;
+        }
+    }
+    &__name {
+        color: #000000;
+        font-family: $titleFontFamily;
+        font-size: 3rem;
+        font-weight: 600;
+        line-height: 1em;
+        text-transform: uppercase;
+    }
+    &__position {
+        color: $mainColor;
+        font-size: 1.8rem;
+        font-weight: 400;
+        line-height: 1.4em;
+        text-align: left;
+    }
+    &__hover-box {
+        position: absolute;
+        top: 0;
+        right: -200%;
+        min-height: calc(100% - 10.3rem);
+        width: calc(100% - 50rem);
+        background: #fff;
+        z-index: 5;
+        box-shadow: 0 3rem 6rem rgba(152, 152, 152, 0.16);
+        transition: all 0.4s ease;
+        overflow: hidden;
+        padding: 4rem 7rem 4rem 7rem;
+        display: flex;
+        flex-direction: column;
+
+        color: #06181c;
+        font-size: 2rem;
+        line-height: 1.75em;
+
+        @media (max-width: $md2+px) {
+            font-size: 1.6rem;
+            overflow: auto;
+            min-height: auto;
+        }
+
+        @media (max-width: 1023px) {
+            display: none;
+            top: 100%;
+            width: calc(100% - 40px);
+            height: auto;
+            right: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 0px 3rem 2rem 3.5rem;
+            transition: none;
+            max-height: 492px;
+        }
+
+        @media (max-width: $md4+px) {
+            width: calc(100% - 20px);
+            font-size: 1.4rem;
+            line-height: 2.2rem;
+            padding: 0px 2rem 2rem 2rem;
+        }
+
+        & h5 {
+            @media (max-width: 1023px) {
+                font-size: 18px;
+                margin-bottom: 0;
+            }
+        }
+
+        & p {
+            @media (max-width: 1023px) {
+                font-size: 16px;
+            }
+        }
+    }
+
+    &__close {
+        font-family: $titleFontFamily;
+        display: inline-block;
+        margin-top: auto;
+        margin-left: auto;
+        color: #b29369;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 1em;
+        text-transform: uppercase;
+        padding: 5px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+
+
+        @media (min-width: 992px) {
+            &:hover {
+                background-color: rgba(#000, 0.1);
+            }
+        }
+    }
+}
