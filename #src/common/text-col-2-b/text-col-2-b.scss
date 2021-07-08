@@ -75,6 +75,55 @@
         }
     }
 
+    &.text-col-2-b_flex {
+        padding-top: 58px;
+        &:before {
+            display: none;
+        }
+
+        & .text-col-2-b__body {
+            padding-right: 0;
+            width: auto;
+            max-width: none;
+            min-height: auto;
+
+            @media (min-width: 1268px) {
+                display: flex;
+            }
+
+            & .text-col-2-b__body__col {
+                &:first-child {
+                    flex: 0 0 49.2%;
+                    margin-bottom: 50px;
+                    @media (min-width: 1268px) {
+                        margin-right: 5.1%;
+                        margin-bottom: 0;
+                    }
+                    
+                }
+                &:last-child {
+                    flex: 1 1 auto {
+
+                    }
+                }
+            }
+
+            & .hero-card {
+                margin-top: -357px;
+
+                @media (min-width: 1268px) {
+                    margin-top: -657px;
+                }
+
+                @media (max-width: $md3+px) {
+                    margin-top: -200px;
+                }
+    
+            }
+        }
+    }
+
+
     &:before {
         position: absolute;
         content: '';

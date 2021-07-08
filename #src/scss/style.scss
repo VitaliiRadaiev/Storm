@@ -537,9 +537,13 @@ button.btn-default {
 @import "../common/cleaning-blog/cleaning-blog";
 @import "../common/partners/partners";
 @import "../common/team/team";
+@import "../common/hero/hero";
+@import "../common/case-study-item/case-study-item";
+@import "../common/case-study-card/case-study-card";
 // ==== BLOCKS =====================================================
 
 // ==== PAGES =====================================================
 @import "pages/home";
 @import "pages/about";
+@import "pages/case-study-detail";
 // ==== AND PAGES =====================================================

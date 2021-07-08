@@ -1,0 +1,233 @@
+.case-study-detail-page {
+}
+
+.hero-card {
+    box-shadow: 0 3px 40px rgba(0, 0, 0, 0.05);
+    background-color: rgba(#fff, 0.94);
+    padding: 47px 52px 61px 79px;
+
+    @media (max-width: $md1+px) {
+        padding: 47px 52px 61px 52px;
+    }
+
+    @media (max-width: $md3+px) {
+        padding: 30px 15px;
+    }
+
+    position: relative;
+    z-index: 5;
+
+    @media (min-width: 1268px) {
+        min-height: 1130px;
+    }
+
+    &__logo {
+        height: 104px;
+        margin-bottom: 46px;
+
+        & img {
+            width: auto;
+            height: auto;
+            max-height: 100%;
+            max-width: 100%;
+        }
+
+        @media (max-width: $md3+px) {
+            height: 70px;
+            margin-bottom: 25px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 25px;
+    }
+
+    &__subtitle {
+        font-size: 40px;
+        font-weight: 400;
+        line-height: 1.25em;
+        margin-bottom: 70px;
+
+        @media (max-width: $md3+px) {
+            font-size: 30px;
+            margin-bottom: 25px;
+        }
+    }
+
+    &__btn {
+        margin-bottom: 62px;
+
+        &.btn-default {
+            font-size: 19px;
+
+            @media (max-width: $md3+px) {
+                font-size: 12px;
+                margin-bottom: 25px;
+            }
+            @media (max-width: $md4+px) {
+                font-size: 9px;
+            }
+            & > span {
+                font-size: 1.6em;
+                min-height: 3.85em;
+                &:before {
+                    font-size: 2em;
+                }
+            }
+        }
+    }
+
+    &__text {
+        font-size: 30px;
+        font-weight: 400;
+        line-height: 1.33em;
+        position: relative;
+        margin-bottom: 13px;
+
+        @media (min-width: 1268px) {
+            max-width: 570px;
+        }
+
+        @media (max-width: $md3+px) {
+            font-size: 20px;
+        }
+    }
+
+    &__quote-left {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transform: translate(-46%, -50%);
+
+        @media (max-width: $md3+px) {
+            & img {
+                width: 30px;
+            }
+        }
+    }
+
+    &__quote-right {
+        position: relative;
+        width: 112px;
+        display: inline-block;
+        & img {
+            position: absolute;
+            top: -0.9em;
+            left: 0;
+            z-index: -1;
+        }
+
+        @media (max-width: $md3+px) {
+            & img {
+                width: 30px;
+            }
+        }
+    }
+
+    &__footer {
+        color: $mainColor;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 1.25em;
+
+        @media (max-width: $md3+px) {
+            font-size: 18px;
+        }
+
+        & p {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.services-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -8px 117px;
+    padding: 38px 0 40px;
+
+    @media (max-width: $md3+px) {
+        margin-bottom: 30px;
+    }
+
+    & > li {
+        flex: 0 1 33.333%;
+        padding: 0 8px;
+        margin-bottom: 16px;
+
+        @media (max-width: $md1+px) {
+            flex: 0 1 50%;
+
+            &:last-child {
+                flex: 0 1 100%;
+            }
+        }
+
+        @media (max-width: $md2+px) {
+            flex: 0 1 100%;
+        }
+    }
+}
+
+.services-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 3px 40px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    padding: 61px 54px 0 54px;
+
+    @media (max-width: $md1+px) {
+        padding: 61px 34px 0 34px;
+    }
+    @media (max-width: $md3+px) {
+        padding: 30px 15px;
+    }
+
+
+
+    &__title {
+        display: flex;
+        color: $mainColor;
+        margin-bottom: 30px;
+    }
+
+    &__icon {
+        flex: 0 0 108px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 8px;
+
+        @media (max-width: 575.98px) {
+            flex: 0 0 70px;
+        }
+
+        & img {
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+
+    &__text {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 1.89em;
+        margin-bottom: 66px;
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__btn {
+        margin-top: auto;
+        &.btn{
+            min-width: 207px;
+            align-self: flex-start;
+        }
+    }
+}

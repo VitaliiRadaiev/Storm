@@ -1,0 +1,36 @@
+.hero {
+    position: relative;
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+
+        &:before {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background-color: rgba(#000, 0.4);
+        }
+    }
+
+    &__body {
+        min-height: 867px;
+        padding: 150px 15px 150px;
+
+        @media (max-width: $md2+px) {
+            min-height: 700px;
+        }
+
+        @media (max-width: $md3+px) {
+            min-height: 500px;
+            padding: 120px 15px 120px;
+        }
+    }
+}
