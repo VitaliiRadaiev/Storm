@@ -31,6 +31,7 @@ window.addEventListener('load', function () {
 	@@include('../common/video-block/video-block.js');
 	@@include('../common/services/services.js');
 	@@include('../common/team/team.js');
+	@@include('../common/accordion/accordion.js');
 	//@@includ e('../common/popup/popup.js');
 	
 	@@include('pages/home.js');

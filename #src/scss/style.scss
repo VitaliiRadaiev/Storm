@@ -312,6 +312,14 @@ textarea {
 }
 
 .text {
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 1.89em;
+
+	& p {
+		margin-bottom: 1em;
+	}
+
 }
 // === and title ========================================================================
 
@@ -540,10 +548,12 @@ button.btn-default {
 @import "../common/hero/hero";
 @import "../common/case-study-item/case-study-item";
 @import "../common/case-study-card/case-study-card";
+@import "../common/accordion/accordion";
 // ==== BLOCKS =====================================================
 
 // ==== PAGES =====================================================
 @import "pages/home";
 @import "pages/about";
 @import "pages/case-study-detail";
+@import "pages/services-detail";
 // ==== AND PAGES =====================================================
