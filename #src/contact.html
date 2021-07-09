@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('_head.html',{
+"title": "New Project"
+})
+
+<body>
+    <div class="_preload-body"></div>
+    <!-- == TOP LINE ================== -->
+    @@include('common/header/_header.html',{})
+    <!-- == // TOP LINE ================== -->
+
+
+    <main class="_page contact-page">
+        <section class="hero">
+            <div class="hero__bg ibg">
+                <img src="img/photo/map.png" alt="">
+            </div>
+            <div class="hero__body container">
+
+            </div>
+        </section>
+
+        <section class="contact">
+            <div class="contact__body container">
+                <div class="contact__col-1">
+                    <h4 class="contact__title title-4">Contact Us</h4>
+                    <div class="contact__text text-content">
+                        <p>
+                            If you would like to contact us regarding any of our services or initiatives, please use the details below. We are more than happy to discuss your existing or future cleaning service needs.
+                           </p>
+                        <p> Know about Storm? Tell us what you think! Share your feedback here</p>
+                    </div>
+                    <ul class="list-contact-data">
+                        <li class="list-contact-data__address">
+                            <div class="list-contact-data__title">
+                                Address 
+                            </div>
+                            <div class="list-contact-data__text">
+                                Unit 18, 55-61 Pine Road, Yennora NSW 2161 Australia
+                            </div>
+                        </li>
+                        <li class="list-contact-data__phone">
+                            <div class="list-contact-data__title">
+                                Phone 
+                            </div>
+                            <div class="list-contact-data__text">
+                                1300 361 325
+                            </div>
+                        </li>
+                        <li class="list-contact-data__fax">
+                            <div class="list-contact-data__title">
+                                Fax 
+                            </div>
+                            <div class="list-contact-data__text">
+                                +61 2 9681 6886
+                            </div>
+                        </li>
+                        <li class="list-contact-data__email">
+                            <div class="list-contact-data__title">
+                                Email 
+                            </div>
+                            <div class="list-contact-data__text">
+                                info@storminternational.com.au
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="contact__col-2">
+                    <form action="/" class="form-contact">
+                        <div class="form-contact__head">
+                            <div class="form-contact__logo">
+                                <img src="img/logo/contact-logo.png" alt="">
+                            </div>
+                            <h4 class="form-contact__head-title title-4">
+                                we cover locations 
+                                Australian wide
+                            </h4>
+                        </div>
+                        <div class="form-contact__body">
+                            <h4 class="form-contact__title title-4">
+                                Get in touch with us.
+                            </h4>
+    
+                            <div class="form-contact__inputs-wrap">
+                                <div class="form-contact__item">
+                                    <div class="form-contact__item-wrap">
+                                        <label for="name">First Name</label>
+                                        <input autocomplete="off" id="name" type="text" name="form[]" placeholder="Michael" class="form-contact__input input">
+                                    </div>	
+                                </div>
+                                <div class="form-contact__item">
+                                    <div class="form-contact__item-wrap">
+                                        <label for="lastname">Last Name</label>
+                                        <input autocomplete="off" id="lastname" type="text" name="form[]" placeholder="Bei" class="form-contact__input input">							
+                                    </div>
+                                </div>
+                                <div class="form-contact__item">
+                                    <div class="form-contact__item-wrap">
+                                        <label for="email">Email address</label>
+                                        <input autocomplete="off" id="email" type="text" name="form[]" placeholder="John@domain.com" class="form-contact__input input email">							
+                                    </div>
+                                </div>
+                                <div class="form-contact__item">
+                                    <div class="form-contact__item-wrap">
+                                        <label for="phone">Phone Number</label>
+                                        <input autocomplete="off" id="phone" type="text" name="form[]" placeholder="+1 917 9055909" class="form-contact__input input _mask">							
+                                    </div>
+                                </div>
+                                <div class="form-contact__item">
+                                    <div class="form-contact__item-wrap">
+                                        <label for="company">Company</label>
+                                        <input autocomplete="off" id="company" type="text" name="form[]" placeholder="TheCompany" class="form-contact__input input ">							
+                                    </div>
+                                </div>
+                                <div class="form-contact__item">
+                                    <div class="form-contact__item-wrap">
+                                        <label for="position">Position</label>
+                                        <input autocomplete="off" id="position" type="text" name="form[]" placeholder="General Manager" class="form-contact__input input ">							
+                                    </div>
+                                </div>
+    
+                                <div class="form-contact__item form-contact__item_textarea">
+                                    <div class="form-contact__item-wrap form-contact__item-wrap_textarea">
+                                        <textarea autocomplete="off" name="form[]" placeholder="Message detail" class="form-contact__input form-contact__input_textarea textarea"></textarea>							
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-contact__submit-wrap">
+                                <button class="form-contact__submit btn" type="submit">send<span class="plus"></span></button>
+                            </div>
+    
+                            <div class="form-contact__agree">
+                                by submitting this form you agree to our <a href="#">privacy policy</a>.
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- == FOOTER ================== -->
+    @@include('common/footer/_footer.html',{})
+    <!-- == // FOOTER ================== -->
+    @@include('_js.html',{})
+</body>
+
+</html>
