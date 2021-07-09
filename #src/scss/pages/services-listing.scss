@@ -1,0 +1,137 @@
+.services-listing-page {
+    & .hero__body {
+        @media (min-width: 992px) {
+            padding-bottom: 188px;
+        }
+    }
+
+    & .promo-header__subtitle {
+        max-width: 722px;
+    }
+}
+
+.services-b {
+    margin-bottom: 100px;
+
+    @media (min-width: 992px) {
+        margin-top: -140px;
+    }
+
+    &__top {
+       
+        box-shadow: 0 3px 40px rgba(0, 0, 0, 0.08);
+        background-color: #ffffff;
+        margin-bottom: 16px;
+
+        @media (min-width: 992px) {
+            display: flex;
+        }
+    }
+
+    &__col-1 {
+        flex: 0 0 41.11%;
+
+        & .mini-gallery {
+            margin-top: -80px;
+            transform: translateX(-30px);
+            @media (min-width: 1540px) {
+                transform: translateX(-67px);
+            }
+
+            @media (max-width: $md2+px) {
+                margin-top: 0;
+                transform: translate(0px, -80px);
+                margin: 0 auto;
+            }
+        }
+    }
+
+    &__col-2 {
+        flex: 1 1 auto;
+        padding: 80px 100px 80px 25px;
+
+        @media (max-width: $md2+px) {
+            padding: 20px 20px 40px 20px;
+        }
+
+        @media (max-width: $md3+px) {
+            margin-top: -50px;
+        }
+    }
+
+    &__title {
+        text-transform: uppercase;
+        margin-bottom: 42px;
+    }
+
+    &__text {
+        &.text-content {
+            & p:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -8px;
+
+        & > li {
+            padding: 0 8px;
+            flex: 0 1 25%;
+            margin-bottom: 16px;
+
+            @media (max-width: 1350px) {
+                flex: 0 1 50%;
+            }
+
+            @media (max-width: 575.98px) {
+                flex: 0 1 100%;
+            }
+        }
+    }
+}
+
+.services-b-card {
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.08);
+    background-color: #ffffff;
+    padding: 67px 15px 60px 15px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (max-width: 575.98px) {
+        padding: 30px 15px 30px 15px;
+    }
+
+    & > div {
+        @media (min-width: 576px) {
+            max-width: 273px;
+
+        }
+    }
+    
+
+    &__icon {
+        height: 67px;
+        margin-bottom: 13px;
+        & img {
+            height: 100%;
+            width: auto;
+        }
+    }
+
+    &__title {
+        color: $mainColor;
+        margin-bottom: 35px;
+
+        @media (max-width: 575.98px) {
+            margin-bottom: 25px;
+        }
+    }
+
+    &__text {
+    }
+}

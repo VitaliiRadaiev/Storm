@@ -39,6 +39,10 @@
                 }
             }
         }
+
+        &:nth-child(odd) {
+            background-color: #fafafa;
+        }
     }
 }
 

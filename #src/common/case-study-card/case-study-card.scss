@@ -14,6 +14,15 @@
         padding: 30px 15px 0;
     }
 
+    &.case-study-card_v2 {
+        & .case-study-card__col-1 {
+            @media (min-width: 768px) {
+                padding: 48px 40px 56px 7.5%;
+            }
+        }
+
+    }
+
     &__col-1 {
         @media (min-width: 768px) {
             flex: 0 0 45.23%;
@@ -64,6 +73,20 @@
         }
     }
 
+    &__icon {
+        height: 95px;
+        margin-bottom: 21px;
+
+        @media (max-width: $md4+px) {
+            height: 70px;
+        }
+
+        & img {
+            height: 100%;
+            width: auto;
+        }
+    }
+
     &__suptitle {
         color: $mainColor;
         font-size: 18px;
@@ -76,9 +99,48 @@
         @media (max-width: $md3+px) {
             margin-bottom: 30px;
         }
+
+        &_brown {
+            color: $mainColor;
+            margin-bottom: 21px;
+        }
     }
 
     &__btn {
         align-self: flex-start;
+    }
+
+    &__tags {
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 10px;
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: $md4+px) {
+            font-size: 8px;
+        }
+
+
+        & > li {
+            white-space: nowrap;
+            color: #b29369;
+            font-family: $titleFontFamily;
+            font-size: 1.5em;
+            font-weight: 600;
+            line-height: 1.2em;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            border-radius: 3px;
+            border: 1px solid #b29369;
+            background-color: #ffffff;
+            margin-right: 5px;
+            margin-bottom: 5px;
+            height: 2.8em;
+            padding: 0.8em 1em;
+        }
     }
 }

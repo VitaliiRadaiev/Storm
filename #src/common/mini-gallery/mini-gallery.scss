@@ -105,6 +105,96 @@
         }
     }
 
+    &.mini-gallery_3 {
+        max-width: 622px;
+        height: 700px;
+        
+        @media (max-width: $md2+px) {
+            height: 0;
+            padding-bottom: 100%;
+        } 
+
+        & .mini-gallery__img_1 {
+            top: 0;
+            left: 22.8%;
+            height: 54.3%;
+            width: 69%;
+
+            & img {
+                height: 100%;
+                width: 89%;
+                top: 0;
+                left: 0;
+                z-index: 2;
+                box-shadow: 0 3px 60px rgba(0, 0, 0, 0.3);
+            }
+
+            &:before {
+                top: 0;
+                right: 0;
+                left: auto;
+                height: 100%;
+            }
+        }
+        & .mini-gallery__img_2 {
+            right: auto;
+            bottom: 0;
+            height: 60%;
+            width: 61.5%;
+
+            & img {
+                
+                width: 100%;
+                height: 91%;
+                z-index: 2;
+            }
+
+            &:before {
+                left: auto;
+                right: 0;
+                position: absolute;
+                content: '';
+                z-index: 1;
+                width: 62.42%;
+                height: 68.30%;
+            }
+        }
+        & .mini-gallery__img_3 {
+            left: auto;
+            right: 0;
+            bottom: 0;
+            width: 40.76%;
+            height: 45.7%;
+
+            & img {
+                top: 0;
+                left: auto;
+                right: 0;
+                bottom: auto;
+                width: 100%;
+                height: 83.2%;
+                z-index: 2;
+
+                @media (max-width: $md2+px) {
+                    height: 79.2%;
+                }
+            }
+
+            &:before {
+                position: absolute;
+                content: '';
+                z-index: 1;
+                top: auto;
+                left: auto;
+                right: 0;
+                bottom: 0;
+                width: 35%;
+                height: 90%;
+                background-color: $mainColor2;
+            }
+        }
+    }
+
     &__img {
         position: absolute;
 
