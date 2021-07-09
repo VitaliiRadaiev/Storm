@@ -151,11 +151,14 @@ function selects_init() {
 }
 function selects_close(e) {
 	const selects = document.querySelectorAll('.select');
+	
 	if (!e.target.closest('.select')) {
 		for (let index = 0; index < selects.length; index++) {
 			const select = selects[index];
 			const select_body_options = select.querySelector('.select__options');
+			const wrap = selects[index].closest('.main-select');
 			select.classList.remove('_active');
+			wrap.classList.remove('_active');
 			_slideUp(select_body_options, 100);
 		}
 	}
@@ -206,19 +209,22 @@ function select_actions(original, select) {
 	const select_options = select.querySelectorAll('.select__option');
 	const select_type = original.getAttribute('data-type');
 	const select_input = select.querySelector('.select__input');
-
-	select_item.addEventListener('click', function () {
+	const wrap = select_item.closest('.main-select');
+	wrap.addEventListener('click', function (e) {
 		let selects = document.querySelectorAll('.select');
 		for (let index = 0; index < selects.length; index++) {
 			const select = selects[index];
 			const select_body_options = select.querySelector('.select__options');
 			if (select != select_item.closest('.select')) {
 				select.classList.remove('_active');
+				wrap.classList.remove('_active');
 				_slideUp(select_body_options, 100);
 			}
 		}
-		_slideToggle(select_body_options, 100);
-		select.classList.toggle('_active');
+
+		 _slideToggle(select_body_options, 100);
+		 select.classList.toggle('_active');
+		 wrap.classList.toggle('_active');
 	});
 
 	for (let index = 0; index < select_options.length; index++) {

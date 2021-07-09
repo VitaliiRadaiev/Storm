@@ -265,7 +265,7 @@ textarea {
 .title-2 {
 	font-family: $titleFontFamily;
 	font-size: 60px;
-	font-weight: 600;
+	font-weight: 800;
 	line-height: 1em;
 	text-transform: uppercase;
 
@@ -558,6 +558,7 @@ button.btn-default {
 @import "../common/case-study-item/case-study-item";
 @import "../common/case-study-card/case-study-card";
 @import "../common/accordion/accordion";
+@import "../common/main-select/main-select";
 // ==== BLOCKS =====================================================
 
 // ==== PAGES =====================================================
@@ -568,4 +569,5 @@ button.btn-default {
 @import "pages/contact";
 @import "pages/services-listing";
 @import "pages/case-studies-listing";
+@import "pages/blog-list";
 // ==== AND PAGES =====================================================
