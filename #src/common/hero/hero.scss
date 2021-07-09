@@ -1,5 +1,25 @@
 .hero {
     position: relative;
+    &.hero_has-card {
+        margin-bottom: 200px;
+
+        @media (max-width: $md2+px) {
+            margin-bottom: 350px;
+        }
+        @media (max-width: $md3+px) {
+            margin-bottom: 310px;
+        }
+
+        & .hero__body {
+            @media (max-width: $md3+px) {
+                min-height: 800px;
+            }
+        }   
+
+        & .promo-header__title {
+            margin-bottom: 27px;
+        }
+    }
     &__bg {
         position: absolute;
         top: 0;
@@ -35,5 +55,15 @@
             min-height: 500px;
             padding: 120px 15px 120px;
         }
+
+        & .case-study-card {
+            max-width: 1008px;
+            margin-bottom: -181px;
+            
+            @media (max-width: $md2+px) {
+                margin-bottom: -381px;
+            }
+        }
+
     }
 }

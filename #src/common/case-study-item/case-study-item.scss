@@ -5,6 +5,20 @@
         margin-bottom: 50px;
     }
 
+    &.case-study-item_child {
+        & .case-study-item__img {
+            @media (min-width: 992px) {
+                right: 0%;
+            } 
+        }
+
+        & .case-study-item__content {
+            @media (min-width: 1268px) {
+                margin-left: 0%;
+            }
+        }
+    }   
+
     &__title {
         text-align: center;
         margin-bottom: 73px;

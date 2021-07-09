@@ -320,6 +320,14 @@ textarea {
 		margin-bottom: 1em;
 	}
 
+	& h4 {
+		font-family: $titleFontFamily;
+		font-size: 30px;
+		font-weight: 700;
+		line-height: 1.16em;
+		margin-bottom: 0.5em;
+	}
+
 }
 // === and title ========================================================================
 
@@ -559,4 +567,5 @@ button.btn-default {
 @import "pages/services-detail";
 @import "pages/contact";
 @import "pages/services-listing";
+@import "pages/case-studies-listing";
 // ==== AND PAGES =====================================================

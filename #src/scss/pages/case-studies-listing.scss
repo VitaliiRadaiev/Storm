@@ -1,0 +1,43 @@
+.case-studies-listing-page {
+
+}
+
+
+.case-studies-list {
+    margin-bottom: 155px;
+    @media (max-width: $md3+px) {
+        margin-bottom: 50px;
+    }
+    & .case-study-item {
+        &:not(:last-child) {
+            margin-bottom: 70px;
+
+            @media (max-width: $md3+px) {
+                margin-bottom: 50px;
+            }
+        }
+
+        &:nth-child(even) {
+            & .case-study-item__img {
+                @media (min-width: 992px) {
+                    right: auto;
+                    left: 0;
+                } 
+            }
+
+            & .case-study-item__body {
+                align-items: flex-end;
+            }
+
+            & .case-study-item__content {
+                @media (min-width: 1268px) {
+                    margin-right: 0%;
+                }
+
+                @media (min-width: 992px) {
+                    margin-left: 6.7%;
+                }
+            }
+        }
+    }
+}
