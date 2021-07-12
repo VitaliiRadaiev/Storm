@@ -35,6 +35,7 @@ window.addEventListener('load', function () {
 	//@@includ e('../common/popup/popup.js');
 	
 	@@include('pages/home.js');
+	@@include('pages/blog-detail.js');
 });
 
 window.addEventListener('DOMContentLoaded', function() {

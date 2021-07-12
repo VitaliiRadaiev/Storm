@@ -327,7 +327,6 @@ textarea {
 		line-height: 1.16em;
 		margin-bottom: 0.5em;
 	}
-
 }
 // === and title ========================================================================
 
@@ -431,7 +430,7 @@ button.btn-default {
 	height: 35px;
 	&:before {
 		position: absolute;
-		content: '';
+		content: "";
 		top: 0;
 		left: 50%;
 		transform: translateX(-50%);
@@ -441,7 +440,7 @@ button.btn-default {
 	}
 	&:after {
 		position: absolute;
-		content: '';
+		content: "";
 		top: 50%;
 		left: 0;
 		transform: translateY(-50%);
@@ -466,6 +465,34 @@ button.btn-default {
 	display: flex;
 	flex-wrap: wrap;
 
+	&.social_vertical {
+
+		@media (min-width: 992px) {
+			display: block;
+		}
+
+		@media (max-width: $md2+px) {
+			max-width: none !important;
+		}
+		& > li {
+			
+			margin-bottom: 6px;
+
+			@media (min-width: 999px) {
+				margin-right: 0;
+			}
+
+			& a {
+				height: 39px;
+				& svg {
+					& path {
+						fill: #222221;
+					}
+				}
+			}
+		}
+	}
+
 	& > li {
 		margin-right: 6px;
 		margin-bottom: 6px;
@@ -474,14 +501,15 @@ button.btn-default {
 			display: inline-block;
 			height: 29px;
 
-			& img, & svg {
+			& img,
+			& svg {
 				height: 100%;
 				width: auto;
 			}
 
 			& svg {
 				& path {
-					transition: all .3s ease;
+					transition: all 0.3s ease;
 				}
 			}
 
@@ -509,34 +537,136 @@ button.btn-default {
 	}
 
 	& h1 {
+		margin-top: 0;
+		margin-bottom: 0;
+		font-family: $titleFontFamily;
+		font-size: 100px;
+		font-weight: 600;
+		line-height: 1em;
+		text-transform: uppercase;
+		margin-bottom: 0.5em;
+	
+		@media (max-width: $md2+px) {
+			font-size: 80px;
+		}
+		@media (max-width: $md3+px) {
+			font-size: 60px;
+		}
+		@media (max-width: $md4+px) {
+			font-size: 36px;
+		}
 	}
+
 	& h2 {
+		font-family: $titleFontFamily;
+		font-size: 60px;
+		font-weight: 800;
+		line-height: 1em;
+		text-transform: uppercase;
+		margin-bottom: 0.5em;
+	
+		@media (max-width: $md3+px) {
+			font-size: 50px;
+		}
+		@media (max-width: $md4+px) {
+			font-size: 36px;
+		}
 	}
 	& h3 {
+		font-family: $titleFontFamily;
+		font-size: 40px;
+		font-weight: 600;
+		line-height: 1em;
+		text-transform: uppercase;
+		margin-bottom: 0.5em;
+	
+		@media (max-width: $md3+px) {
+			font-size: 30px;
+		}
 	}
 	& h4 {
+		font-family: $titleFontFamily;
+		font-size: 30px;
+		font-weight: 700;
+		line-height: 1.16em;
+		margin-bottom: 0.5em;
 	}
 
 	& h5 {
+		font-family: $titleFontFamily;
+		font-size: 20px;
+		font-weight: 600;
+		line-height: 1.5em;
+		text-transform: uppercase;
+		margin-bottom: 0.5em;
 	}
 	& h6 {
+		font-family: $titleFontFamily;
+		font-size: 18px;
+		font-weight: 600;
+		line-height: 1.5em;
+		text-transform: uppercase;
+		margin-bottom: 0.5em;
 	}
 
 	& p {
-		margin-bottom: 1.3em;
+		margin-bottom: 1.23em;
 
 		&:last-of-type {
 			margin-bottom: 0;
 		}
+
+		&.text-big {
+			font-family: $titleFontFamily;
+			font-size: 25px;
+			line-height: 1.4em;
+			font-weight: 500;
+			margin-bottom: 1.5em;
+
+			@media (max-width: $md3+px) {
+				font-size: 22px;
+			}
+		}
+
+		& ~  h1,  & ~ h2, & ~ h3, & ~ h4, & ~ h5, & ~ h6  {
+			margin-top: 1em;
+		}
 	}
 
 	& ul {
+		margin-bottom: 1.3em;
+
+		& > li {
+			list-style: disc;
+			list-style-position: inside;
+		}
 	}
 
 	& ol {
+		margin-bottom: 1.3em;
+		list-style-position: inside;
 	}
 
 	& figure {
+		margin-bottom: 2.9em;
+		margin-top: 3.6em;
+
+		@media (max-width: $md3+px) {
+			margin-bottom: 2em;
+			margin-top: 2em;
+		}
+		& img {
+			width: 100%;
+			display: block;
+			margin-bottom: 13px;
+		}
+
+		& figcaption {
+			color: #b5b5b5;
+			font-size: 14px;
+			font-weight: 400;
+			line-height: 1.3em;
+		}
 	}
 }
 // === and TEXT CONTETN BLOCK ========================================================================
@@ -570,4 +700,5 @@ button.btn-default {
 @import "pages/services-listing";
 @import "pages/case-studies-listing";
 @import "pages/blog-list";
+@import "pages/blog-detail";
 // ==== AND PAGES =====================================================
