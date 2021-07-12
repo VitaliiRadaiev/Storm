@@ -131,22 +131,32 @@
         }
 
         & > li {
-            white-space: nowrap;
-            color: #b29369;
-            font-family: $titleFontFamily;
-            font-size: 1.5em;
-            font-weight: 600;
-            line-height: 1.2em;
-            text-transform: uppercase;
-            display: flex;
-            align-items: center;
-            border-radius: 3px;
-            border: 1px solid #b29369;
-            background-color: #ffffff;
             margin-right: 5px;
             margin-bottom: 5px;
-            height: 2.8em;
-            padding: 0.8em 1em;
+
+            & a {
+                white-space: nowrap;
+                color: #b29369;
+                font-family: $titleFontFamily;
+                font-size: 1.5em;
+                font-weight: 600;
+                line-height: 1.2em;
+                text-transform: uppercase;
+                display: flex;
+                align-items: center;
+                border-radius: 3px;
+                border: 1px solid #b29369;
+                background-color: #ffffff;
+                height: 2.8em;
+                padding: 0.8em 1em;
+                transition: all .3s ease;
+
+                @media (min-width: 992px) {
+                    &:hover {
+                        background-color: rgba(#b29369, 0.2);
+                    }
+                }
+            }
         }
     }
 }

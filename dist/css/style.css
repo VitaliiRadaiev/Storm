@@ -3100,6 +3100,11 @@ textarea {
 }
 
 .case-study-card__tags > li {
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.case-study-card__tags > li a {
   white-space: nowrap;
   color: #b29369;
   font-family: "CircularStd", sans-serif;
@@ -3116,10 +3121,11 @@ textarea {
   border-radius: 3px;
   border: 1px solid #b29369;
   background-color: #ffffff;
-  margin-right: 5px;
-  margin-bottom: 5px;
   height: 2.8em;
   padding: 0.8em 1em;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .accordion > li {
@@ -4927,6 +4933,10 @@ textarea {
     right: -5.8%;
     height: 100%;
     width: 65.8%;
+  }
+
+  .case-study-card__tags > li a:hover {
+    background-color: rgba(178, 147, 105, 0.2);
   }
 
   .accordion__title:hover {
