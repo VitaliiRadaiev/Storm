@@ -123,6 +123,27 @@
         }
     }
 
+    &.text-col-2-b_v2 {
+        & .text-col-2-b__body {
+           
+            max-width: none;
+            min-height: auto;
+            width: auto;
+            padding: 0 !important;
+
+            @media (min-width: 992px) {
+                display: flex;
+            }
+        }
+
+        & .text-col-2-b__body-col-1 {
+            flex: 1 1 auto;
+        }
+        & .text-col-2-b__body-col-2 {
+            flex: 0 0 49%;
+        }
+    }
+
 
     &:before {
         position: absolute;

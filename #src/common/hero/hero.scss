@@ -14,7 +14,7 @@
             @media (max-width: $md3+px) {
                 min-height: 800px;
             }
-        }   
+        }
 
         & .promo-header__title {
             margin-bottom: 27px;
@@ -30,7 +30,7 @@
         background-color: #f3f3f3;
         &:before {
             position: absolute;
-            content: '';
+            content: "";
             top: 0;
             left: 0;
             width: 100%;
@@ -59,11 +59,41 @@
         & .case-study-card {
             max-width: 1008px;
             margin-bottom: -181px;
-            
+
             @media (max-width: $md2+px) {
                 margin-bottom: -381px;
             }
         }
 
+        &.hero__body_content-right {
+            padding-bottom: 0;
+            align-items: flex-end;
+        }
+    }
+
+    &__box {
+        width: 49%;
+        box-shadow: 0 3px 40px rgba(0, 0, 0, 0.05);
+        background-color: rgba(#fff, 0.98);
+        padding: 117px 65px 106px 68px;
+        color: #000000;
+        font-family: $titleFontFamily;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 1.25em;
+        text-transform: uppercase;
+
+        @media (max-width: $md1+px) {
+            font-size: 30px;
+        }
+
+        @media (max-width: $md2+px) {
+            width: 100%;
+            padding: 50px 30px;
+        }
+
+        @media (max-width: $md3+px) {
+            font-size: 20px;
+        }
     }
 }
