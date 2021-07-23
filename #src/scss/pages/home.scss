@@ -4,6 +4,17 @@
             height: calc(100% + 350px);
         }
     }
+
+    & .text-col-2-b__body {
+        & img {
+
+            &:last-child {
+                display: block;
+                max-width: 150px;
+                margin: 0 auto;
+            }
+        }
+    }
 }
 
 .our-works {

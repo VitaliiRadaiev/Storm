@@ -1158,7 +1158,7 @@ textarea {
   margin-bottom: 1.23em;
 }
 
-.text-content p:last-of-type {
+.text-content p:last-child {
   margin-bottom: 0;
 }
 
@@ -1580,6 +1580,16 @@ textarea {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 2;
+}
+
+.promo-header__bg video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .promo-header__body {
@@ -3462,6 +3472,7 @@ textarea {
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .main-select:before {
@@ -3539,6 +3550,12 @@ textarea {
 
 .home-page .bg:before {
   height: calc(100% + 350px);
+}
+
+.home-page .text-col-2-b__body img:last-child {
+  display: block;
+  max-width: 150px;
+  margin: 0 auto;
 }
 
 .our-works {

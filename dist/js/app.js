@@ -528,7 +528,7 @@ function selects_init() {
 function selects_close(e) {
 	const selects = document.querySelectorAll('.select');
 	
-	if (!e.target.closest('.select')) {
+	if (!e.target.closest('.main-select')) {
 		for (let index = 0; index < selects.length; index++) {
 			const select = selects[index];
 			const select_body_options = select.querySelector('.select__options');
@@ -586,6 +586,7 @@ function select_actions(original, select) {
 	const select_type = original.getAttribute('data-type');
 	const select_input = select.querySelector('.select__input');
 	const wrap = select_item.closest('.main-select');
+
 	wrap.addEventListener('click', function (e) {
 		let selects = document.querySelectorAll('.select');
 		for (let index = 0; index < selects.length; index++) {
@@ -597,7 +598,6 @@ function select_actions(original, select) {
 				_slideUp(select_body_options, 100);
 			}
 		}
-
 		 _slideToggle(select_body_options, 100);
 		 select.classList.toggle('_active');
 		 wrap.classList.toggle('_active');
