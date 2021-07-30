@@ -69,6 +69,10 @@
             padding-bottom: 0;
             align-items: flex-end;
         }
+
+        & .blog-list__top  {
+            justify-content: flex-start;
+        }
     }
 
     &__box {

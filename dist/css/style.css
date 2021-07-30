@@ -1170,6 +1170,20 @@ textarea {
   margin-bottom: 1.5em;
 }
 
+.text-content p > strong {
+  font-size: 18px;
+}
+
+.text-content p > strong strong {
+  font-size: 1.3888em;
+  color: #3f3f3f;
+}
+
+.text-content p img {
+  width: 100%;
+  display: block;
+}
+
 .text-content p ~ h1,
 .text-content p ~ h2,
 .text-content p ~ h3,
@@ -3027,6 +3041,12 @@ textarea {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+}
+
+.hero__body .blog-list__top {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .hero__box {
@@ -5366,6 +5386,10 @@ textarea {
     z-index: 1;
   }
 
+  .blog-list__top {
+    min-height: 300px;
+  }
+
   .blog-list__top-wrap {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 55%;
@@ -5400,6 +5424,7 @@ textarea {
             flex: 1 1 auto;
     position: relative;
     padding: 74px 0 111px 106px;
+    min-height: 411px;
     z-index: 3;
   }
 
@@ -6858,6 +6883,10 @@ textarea {
 
   .text-content h2 {
     font-size: 36px;
+  }
+
+  .text-content p > strong {
+    font-size: 16px;
   }
 
   .header__btn.btn-default {
