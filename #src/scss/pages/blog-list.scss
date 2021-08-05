@@ -1,4 +1,22 @@
+.blog-list-page {
+    & .hero__body {
+        color: #fff;
 
+        & .blog-list__title  {
+            &  a {
+                color: #fff;
+            }
+        }
+
+        & .blog-list__data {
+            color: #fff;
+
+            & > li:last-child {
+                color: #fff;
+            }
+        }
+    } 
+}
 .blog-list {
     position: relative;
     margin-bottom: 135px;
@@ -57,6 +75,17 @@
 
     &__title {
         margin-bottom: 16px;
+
+        & > a {
+            color: #000;
+            transition: all .3s ease;
+
+            @media (min-width: 992px) {
+                &:hover {
+                    color: $mainColor;
+                }
+            }
+        }
     }
 
     &__data {
@@ -77,6 +106,10 @@
                     background-color: $mainColor;
                     margin: 0 7px 2px 5px;
                 }
+            }
+
+            &:last-child {
+                color: $textColor;
             }
         }
     }

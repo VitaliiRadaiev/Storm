@@ -11,6 +11,10 @@
         @media (max-width: $md3+px) {
             margin-bottom: 50px;
         }
+
+        &:before {
+            display: none;
+        }
     }
 }
 

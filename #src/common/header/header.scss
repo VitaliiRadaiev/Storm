@@ -87,12 +87,12 @@
         width: 100%;
         height: 100%;
         background-color: #fff;
-        overflow: auto;
         padding: 100px 20px 20px;
         transition: all .4s ease;
         transform: translateX(110%);
-
-
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         &.open {
             transform: translateX(0%);
         }
@@ -157,10 +157,13 @@
 
 
         @media (max-width: $md2+px) {
-            justify-content: center;
+           // justify-content: center;
+           overflow: auto;
             text-align: center;
-            height: 100%;
-            flex-direction: column;
+            max-height: 100%;
+            height: auto;
+            display: block;
+            padding: 5px 0;
         }
 
         & > li {
@@ -175,6 +178,62 @@
                     margin-right: 0;
                     margin-bottom: 20px;
                 }
+            }
+
+            &.menu-item-has-children {
+                position: relative;
+
+                & ._trigger {
+                    position: absolute;
+                    top: -4px;
+                    right: 0;
+                    z-index: 3;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 30px;
+                    width: 50px;
+                    border: 2px solid #000;
+                    border-radius: 10px;
+
+                    @media (min-width: 992px) {
+                        display: none;
+                    }
+
+                    &:before {
+                        font-family: 'icomoon';
+                        content: "\e904";
+                        font-size: 24px;
+                        transition: all .3s ease;
+                    }
+
+                    &.active {
+                        &:before {
+                            transform: scale(1, -1);
+                        }
+                    }
+                }
+
+                @media (max-width: $md2+px) {
+                    & .sub-menu {
+                        display: none;
+                        position: static;
+
+                        & .menu__link {
+                            font-size: 16px;
+                        }
+                    }
+
+                    &:hover {
+                        & .sub-menu {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            & .sub-menu {
+                display: none;
             }
         }
     }
@@ -200,6 +259,9 @@
 
         @media (max-width: $md2+px) {
             font-size: 24px;
+            display: block;
+            width: 100%;
+            padding: 0 60px;
         }
 
         &.current-menu-item {

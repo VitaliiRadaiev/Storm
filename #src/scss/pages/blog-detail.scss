@@ -2,8 +2,18 @@
     & .hero__body {
         color: #fff;
 
+        & .blog-list__title  {
+            & a {
+                color: #fff;
+            }
+        }
+
         & .blog-list__data {
             color: #fff;
+
+            & > li:last-child {
+                color: #fff;
+            }
         }
     }   
 }

@@ -32,10 +32,12 @@ window.addEventListener('load', function () {
 	@@include('../common/services/services.js');
 	@@include('../common/team/team.js');
 	@@include('../common/accordion/accordion.js');
+	@@include('../common/partners/partners.js');
 	//@@includ e('../common/popup/popup.js');
 	
 	@@include('pages/home.js');
 	@@include('pages/blog-detail.js');
+	@@include('pages/services-listing.js');
 });
 
 window.addEventListener('DOMContentLoaded', function() {

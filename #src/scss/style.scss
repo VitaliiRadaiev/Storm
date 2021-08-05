@@ -32,7 +32,7 @@
 //<FANCYBOX>===============================================================================================
 
 // ==== PLAGINS ===========================================================================================
-//@import "plagins/swiper-bundle";
+@import "plagins/swiper-bundle";
 //@import "plagins/drift-basic";
 // ==== // PLAGINS ===========================================================================================
 
@@ -466,7 +466,6 @@ button.btn-default {
 	flex-wrap: wrap;
 
 	&.social_vertical {
-
 		@media (min-width: 992px) {
 			display: block;
 		}
@@ -475,7 +474,6 @@ button.btn-default {
 			max-width: none !important;
 		}
 		& > li {
-			
 			margin-bottom: 6px;
 
 			@media (min-width: 999px) {
@@ -536,6 +534,17 @@ button.btn-default {
 		font-size: 16px;
 	}
 
+	& h1,
+	& h2,
+	& h3,
+	& h4,
+	& h5,
+	& h6 {
+		& strong {
+			font-weight: inherit;
+		}
+	}
+
 	& h1 {
 		margin-top: 0;
 		margin-bottom: 0;
@@ -545,7 +554,7 @@ button.btn-default {
 		line-height: 1em;
 		text-transform: uppercase;
 		margin-bottom: 0.5em;
-	
+
 		@media (max-width: $md2+px) {
 			font-size: 80px;
 		}
@@ -560,11 +569,11 @@ button.btn-default {
 	& h2 {
 		font-family: $titleFontFamily;
 		font-size: 60px;
-		font-weight: 800;
+		font-weight: 600;
 		line-height: 1em;
 		text-transform: uppercase;
 		margin-bottom: 0.5em;
-	
+
 		@media (max-width: $md3+px) {
 			font-size: 50px;
 		}
@@ -579,7 +588,7 @@ button.btn-default {
 		line-height: 1em;
 		text-transform: uppercase;
 		margin-bottom: 0.5em;
-	
+
 		@media (max-width: $md3+px) {
 			font-size: 30px;
 		}
@@ -587,26 +596,26 @@ button.btn-default {
 	& h4 {
 		font-family: $titleFontFamily;
 		font-size: 30px;
-		font-weight: 700;
+		font-weight: 600;
 		line-height: 1.16em;
 		margin-bottom: 0.5em;
 	}
 
 	& h5 {
 		font-family: $titleFontFamily;
-		font-size: 20px;
-		font-weight: 600;
-		line-height: 1.5em;
-		text-transform: uppercase;
 		margin-bottom: 0.5em;
+		color: #3f3f3f;
+		font-size: 1.666em;
+		font-weight: 700;
+		line-height: 1.4em;
 	}
 	& h6 {
 		font-family: $titleFontFamily;
-		font-size: 18px;
-		font-weight: 600;
-		line-height: 1.5em;
-		text-transform: uppercase;
 		margin-bottom: 0.5em;
+		color: #3f3f3f;
+		font-size: 1.3888em;
+		font-weight: 700;
+		line-height: 1.4em;
 	}
 
 	& p {
@@ -635,7 +644,7 @@ button.btn-default {
 				font-size: 16px;
 			}
 
-			&  strong {
+			& strong {
 				font-size: 1.3888em;
 				color: #3f3f3f;
 			}
@@ -646,7 +655,12 @@ button.btn-default {
 			display: block;
 		}
 
-		& ~  h1,  & ~ h2, & ~ h3, & ~ h4, & ~ h5, & ~ h6  {
+		& ~ h1,
+		& ~ h2,
+		& ~ h3,
+		& ~ h4,
+		& ~ h5,
+		& ~ h6 {
 			margin-top: 1.3em;
 		}
 	}
